@@ -10,7 +10,7 @@
         this.filtros.addFiltro('Sudamerica', (e) => e.subregion ==='South America');
         this.filtros.addFiltro('Norte América', (e) => e.subregion ==='North America');
         this.filtros.addFiltro('Super Poblado', (e) => e.population > 100000000);
-        this.filtros.addFiltro('Inusuales', (e) => e.landlocked === false);
+        this.filtros.addFiltro('Inusuales', (e) => e.landlocked);
         this.filtros.addFiltro('De habla Guaraní', (e) => e.languages && Object.keys(e.languages).includes("grn"));
         const selectElement = document.getElementById('paises-select');
         const filtrosDisponibles = this.filtros.getFiltros()
